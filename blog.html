@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blogs</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -26,14 +25,123 @@
         <div class="p-2">
             <h1 class="underline text-center font-bold text-4xl">Questions</h1>
         </div>
-        
-        
+
+
     </header>
 
     <main>
-        <div class="">
-
+        <!-- question 1 -->
+        <div class="m-4 p-4 text-justify">
+            <h1 class="text-3xl font-semibold">Discuss the scope of var, let, and const.</h1><br>
+            <div>
+                <h3 class="underline font-medium text-2xl">var</h3>
+                <p><span class="font-medium">Function Scope:</span> A variable declared with var is function-scoped.
+                    This means that the variable is accessible anywhere within the function it was declared in, even if
+                    it's declared inside a block like a loop or an if statement.</p>
+                <p><span class="font-medium">Global Scope:</span> If declared outside any function, it has a global
+                    scope and is accessible from anywhere in your code, potentially leading to unintended side-effects.
+                </p>
+                <p><span class="font-medium">Hoisting:</span> Variables declared with var are hoisted to the top of
+                    their scope. This means they are technically available even before the line on which they are
+                    declared. However, their value will be undefined until the line where you actually initialize them.
+                </p>
+            </div>
+            <div>
+                <h3 class="underline font-medium text-2xl">let</h3>
+                <p><span class="font-medium">Block Scope: </span> let was introduced in ES6/ES2015 and provides block
+                    scoping. A variable declared with let inside a block (like inside an if statement, a loop, or any
+                    curly braces {}) is only accessible within that block.</p>
+                <p><span class="font-medium">Global Scope:</span> If declared outside any function or block, it's global
+                    but not added to the global object (like window in browsers).
+                </p>
+                <p><span class="font-medium">Temporal Dead Zone:</span>While let variables are also hoisted, they have a
+                    "temporal dead zone" from the start of the block until the declaration is encountered. Any reference
+                    to the variable in this "dead zone" causes a ReferenceError.
+                </p>
+            </div>
+            <div>
+                <h3 class="underline font-medium text-2xl">const</h3>
+                <p><span class="font-medium">Block Scope: </span>Just like let, const is block-scoped.</p>
+                <p><span class="font-medium">Immutability:</span>When you declare a variable with const, its value can't
+                    be reassigned. This doesn’t mean the value is immutable, just that the variable identifier cannot be
+                    reassigned. For instance, if you have a const object, you can still modify its properties.
+                </p>
+                <p><span class="font-medium">Temporal Dead Zone:</span>It also has the same hoisting behavior with the
+                    "temporal dead zone" as let.
+                </p>
+            </div>
+            <br>
+            <div>
+                <h3 class="font-medium text-md text-gray-600"><q>It's important to note that nowadays, using let and
+                        const is generally preferred over var due to their block scoping, which can help avoid various
+                        bugs and make code easier to understand. It's recommended to use const by default and only use
+                        let when you know the value will change. Avoid var unless you have a specific reason or are
+                        working on older codebases.</q>
+                </h3>
+            </div>
         </div>
+
+        <!-- question 2 -->
+        <div class="m-4 p-4 text-justify">
+            <h1 class="text-3xl font-semibold">Tell us the use cases of null and undefined.</h1><br>
+            <div>
+                <h3 class="underline font-medium text-2xl">undefined</h3>
+                <p><span class="font-medium">Variables:</span>When a variable is declared but not initialized, it's
+                    given the value of undefined.</p>
+                <p><span class="font-medium">Functional Parameters:</span>When a function expects a parameter, but it's
+                    not provided, the parameter takes the value of undefined.</p>
+                <p><span class="font-medium">Object Properties:</span>When you try to access a property of an object
+                    that doesn't exist, you get undefined.</p>
+                <p><span class="font-medium">Return Values:</span>If a function doesn't return anything, it returns
+                    undefined by default.</p>
+                <p><span class="font-medium">Array Elements: </span>IAccessing an array index that doesn't exist will
+                    yield undefined.</p>
+            </div>
+            <div>
+                <h3 class="underline font-medium text-2xl">null</h3>
+                <p><span class="font-medium">Intentional Absence:</span>null is generally used to represent a deliberate
+                    non-value or absence of any object value. It's a way for a developer to signal that there should be
+                    "nothing" in a variable, property, or slot.</p>
+                <p><span class="font-medium">Object Properties: </span>When you want to express that an object's
+                    property exists but currently holds no value (or you want to reset its value), you can assign it
+                    null.</p>
+                <p><span class="font-medium">Prototypal Ancestor:</span>The prototype chain ends with null. When you
+                    access the __proto__ property of Object.prototype, the value is null.</p>
+                <p><span class="font-medium">DOM: </span>When querying the DOM for elements, if no elements are found,
+                    methods like document.getElementById() return null.</p>
+            </div>
+            <br>
+            <div>
+                <h3 class="font-medium text-md text-gray-600"><q>To make your code more expressive, prefer to use null
+                        when you want to intentionally denote that something has "no value", and let undefined indicate
+                        something was unintentionally left uninitialized or not provided.</q>
+                </h3>
+            </div>
+        </div>
+
+        <!-- question 3  -->
+        <div class="m-4 p-4 text-justify">
+            <h1 class="text-3xl font-semibold">What do you mean by REST API?</h1><br>
+            <p>A <span class="font-medium">REST API</span> (also known as RESTful API) is an application programming interface (API or web API) that conforms to the constraints of REST architectural style and allows for interaction with RESTful web services. REST stands for representational state transfer and was created by computer scientist Roy Fielding.</p>
+            <p>
+                REST is a set of architectural constraints, not a protocol or a standard. API developers can implement REST in a variety of ways. <br>
+
+                When a client request is made via a RESTful API, it transfers a representation of the state of the resource to the requester or endpoint. This information, or representation, is delivered in one of several formats via HTTP: JSON (Javascript Object Notation), HTML, XLT, Python, PHP, or plain text. JSON is the most generally popular file format to use because, despite its name, it’s language-agnostic, as well as readable by both humans and machines. <br>
+
+                Something else to keep in mind: Headers and parameters are also important in the HTTP methods of a RESTful API HTTP request, as they contain important identifier information as to the request's metadata, authorization, uniform resource identifier (URI), caching, cookies, and more. There are request headers and response headers, each with their own HTTP connection information and status codes. <br>
+            </p>
+            <br>
+            <p>In order for an API to be considered RESTful, it has to conform to these criteria:</p>
+            <ol class="list-decimal ml-10">
+                <li>A client-server architecture made up of clients, servers, and resources, with requests managed through HTTP.</li>
+                <li>Stateless client-server communication, meaning no client information is stored between get requests and each request is separate and unconnected.</li>
+                <li>Cacheable data that streamlines client-server interactions.</li>
+                <li>A layered system that organizes each type of server (those responsible for security, load-balancing, etc.) involved the retrieval of requested information into hierarchies, invisible to the client.</li>
+                <li>Code-on-demand (optional): the ability to send executable code from the server to the client when requested, extending client functionality. </li>
+            </ol>
+            <br>
+            <h3 class="font-medium text-gray-600"><q>In contrast, REST is a set of guidelines that can be implemented as needed, making REST APIs faster and more lightweight, with increased scalablity—perfect for Internet of Things (IoT) and mobile app development. </q></h3>
+
     </main>
 
 
