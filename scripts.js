@@ -12,11 +12,6 @@ const allVideos = (video) => {
     videoContainer.textContent='';
     video.forEach(element => {
         console.log(element);
-        // let isVerified = element.authors[0].verified;
-        // console.log(isVerified);
-        // if(isVerified==true){
-        //     document.getElementById("verified").classList.remove("hidden");
-        // }
 
         let video = document.createElement("div");
         video.innerHTML = `
@@ -55,6 +50,10 @@ function comedy(){
     loadVideos(1003);
 }
 function drawing(){
-    // id 1005
+    loadVideos(1005);
+    document.getElementById("warning").classList.remove("hidden");    
+}
+
+function sortByView(){
     
 }
