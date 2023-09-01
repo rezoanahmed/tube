@@ -2,32 +2,32 @@
 <html lang="en" data-theme="light">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PH Tube</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        clifford: '#da373d',
-                        phero: '#FF1F3D',
-                    }
-                }
-            }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PH Tube</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            phero: '#FF1F3D',
+          }
         }
-    </script>
+      }
+    }
+  </script>
 </head>
 
 <body>
-    <header>
-        <section class="p-4">
-            <nav>
-                <div class="navbar bg-base-100">
-                    <div class="navbar-start">
-                      <!-- <div class="dropdown">
+  <header>
+    <section class="p-4">
+      <nav>
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <!-- <div class="dropdown">
                         <label tabindex="0" class="btn btn-ghost lg:hidden">
                           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
@@ -43,24 +43,49 @@
                           <li><a>Item 3</a></li>
                         </ul>
                       </div> -->
-                      <!-- <a class="btn btn-ghost normal-case text-xl">daisyUI</a> -->
-                      <img src="images/Logo.png" alt="">
-                    </div>
-                    <div class="navbar-center lg:flex">
-                      <button class="btn">Sort by view</button>
-                    </div>
-                    <div class="navbar-end">
-                      <a class="btn bg-red-500 text-white">Blog</a>
-                    </div>
-                  </div>
-            </nav>
-        </section>
-    </header>
-    <main></main>
-    <footer></footer>
+            <!-- <a class="btn btn-ghost normal-case text-xl">daisyUI</a> -->
+            <img src="images/Logo.png" class="md:h-9" alt="">
+          </div>
+          <div class="navbar-center">
+            <button class="btn capitalize">Sort by view</button>
+          </div>
+          <div class="navbar-end">
+            <a class="btn capitalize bg-red-500 text-white hover:bg-white hover:text-red-500 hover:border-1 hover:border-solid hover:border-red-500"
+              href="blog.html" target="_blank">Blog</a>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <hr class="p-2 w-[90%] mx-auto">
+    <div class="flex justify-center gap-2">
+      <button id="all" class="btn capitalize" onclick="location.reload()">All</button>
+      <button id="music" class="btn capitalize" onclick="music()">Music</button>
+      <button id="comedy" class="btn capitalize" onclick="comedy()">Comedy</button>
+      <button id="drawing" class="btn capitalize" onclick="drawing()">Drawing</button>
+    </div>
+  </header>
+  <main>
+    <section>
+      <div id="videos" class="mt-5 w-[95%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <!-- <div class="card w-full bg-base-100 shadow-xl">
+          <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+          <div class="flex items-center p-3 justify-center">
+            <div>
+              <img src="" alt="image">
+            </div>
+            <div class="card-body">
+              <h2 class="card-title">Building a Winning UX Strategy Using the Kano Model</h2>
+              <p>Awlad Hossain</p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </section>
+  </main>
+  <footer></footer>
 
 
-    <script src="scripts.js"></script>
+  <script src="scripts.js"></script>
 </body>
 
 </html>
